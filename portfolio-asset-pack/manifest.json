@@ -1,0 +1,95 @@
+{
+  "name": "Yash Paradkar Portfolio Asset Pack",
+  "asset_count": 11,
+  "provenance": "Recreated from supplied design mockups using image generation. Project previews are illustrative concepts.",
+  "assets": [
+    {
+      "file": "backgrounds/01-home-background.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Home hero; use the portrait as a separate foreground layer."
+    },
+    {
+      "file": "backgrounds/02-about-background.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "transparent": false,
+      "use": "About page; decorative scene sits at the right."
+    },
+    {
+      "file": "backgrounds/03-skills-background.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Skills page; floating stack is in the upper-right."
+    },
+    {
+      "file": "backgrounds/04-work-background.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Work page; cube and metal band are in the upper-right."
+    },
+    {
+      "file": "backgrounds/05-contact-background.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Contact page; envelope sits on the lower-left with form space on the right."
+    },
+    {
+      "file": "portraits/yash-about-portrait.png",
+      "width": 1122,
+      "height": 1402,
+      "format": "PNG",
+      "transparent": false,
+      "use": "About-page portrait with its dark photographic background."
+    },
+    {
+      "file": "portraits/yash-portrait-transparent.png",
+      "width": 1086,
+      "height": 1448,
+      "format": "PNG",
+      "transparent": true,
+      "use": "Foreground hero portrait with real PNG alpha transparency."
+    },
+    {
+      "file": "projects/jewel-bot-project-preview.png",
+      "width": 1586,
+      "height": 992,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Illustrative Jewel Bot project card preview."
+    },
+    {
+      "file": "projects/miraya-project-preview.png",
+      "width": 1586,
+      "height": 992,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Illustrative Miraya by Garima project card preview."
+    },
+    {
+      "file": "projects/pankaj-overseas-project-preview.png",
+      "width": 1586,
+      "height": 992,
+      "format": "PNG",
+      "transparent": false,
+      "use": "Illustrative Pankaj Overseas project card preview."
+    },
+    {
+      "file": "brand/yp-logo-transparent.png",
+      "width": 2172,
+      "height": 724,
+      "format": "PNG",
+      "transparent": true,
+      "use": "White and lime YP monogram for dark backgrounds."
+    }
+  ]
+}

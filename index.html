@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Paradkar &mdash; Full-Stack Developer & AI Products</title>
+  <meta name="description" content="Portfolio of Yash Paradkar &mdash; Full-Stack Developer & AI Systems builder crafting websites, backend systems, and AI-powered tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="three-layer.css">
+</head>
+<body>
+  <canvas id="three-layer" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glowing Aura Orbs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Global Sticky / Fixed Navbar -->
+  <header class="navbar-wrapper" id="main-nav">
+    <nav class="navbar">
+      <a href="#home" class="brand-logo" aria-label="Yash Paradkar Home">
+        <span class="logo-yp">YP<span class="lime-dot">.</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="Resume-Jewel-Bot.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume" download="Yash_Paradkar_Resume.pdf">Resume &nearr;</a>
+        <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-link active">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#work" class="mobile-link">Work</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="Resume-Jewel-Bot.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume mobile-resume-btn" download="Yash_Paradkar_Resume.pdf">Resume &nearr;</a></li>
+    </ul>
+  </div>
+
+  <main class="single-page-wrapper">
+
+    <!-- =========================================================================
+         SECTION 1: HOME (Hero & Featured Work)
+         ========================================================================= -->
+    <section id="home" class="portfolio-section hero-section">
+      <!-- Background Graphic Layer -->
+      <div class="section-bg-graphic" style="background-image: url('portfolio-asset-pack/backgrounds/home-bg.png');"></div>
+
+      <div class="section-content-container hero-layout">
+        
+        <!-- Giant Backdrop Name Typography with Brush Underline -->
+        <div class="giant-name-backdrop animate-fade-down" aria-hidden="true" style="animation-delay:0.05s">
+          <div class="giant-name-wrap">
+            <span class="giant-name-highlight">
+              YASH
+              <svg class="giant-name-stroke" viewBox="0 0 300 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="brush-stroke-main" d="M 14 38 C 75 30, 160 20, 282 17 C 220 25, 138 35, 76 40 C 116 38, 162 35, 206 32" stroke="#C1502E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="brush-stroke-top" d="M 108 15 C 160 12, 222 14, 270 18" stroke="#C1502E" stroke-width="2.2" stroke-linecap="round" opacity="0.65"/>
+              </svg>
+            </span>
+            <span class="giant-name-last">PARADKAR</span>
+          </div>
+        </div>
+
+        <!-- Transparent Foreground Portrait Layer -->
+        <div class="hero-portrait-container">
+          <img src="portfolio-asset-pack/portraits/Clean professional portrait cutout.png" 
+               alt="Yash Paradkar" 
+               class="hero-portrait-img">
+        </div>
+
+        <!-- Hero Content Grid -->
+        <div class="hero-content-row">
+          
+          <!-- Left Column -->
+          <div class="hero-left-col">
+            <h1 class="hero-main-title animate-fade-up" style="animation-delay:0.25s">
+              I turn ideas<br>
+              into digital<br>
+              <span class="lime-text">experiences.</span>
+            </h1>
+            <p class="hero-desc-text animate-fade-up" style="animation-delay:0.42s">
+              <strong>Websites</strong>, <strong>backend systems</strong>, and <strong>AI-powered tools.</strong>
+            </p>
+
+            <div class="hero-btn-group animate-fade-up" style="animation-delay:0.56s">
+              <a href="#work" class="btn-primary">
+                Explore my work <span class="arrow-up">&nearr;</span>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                Let's talk <span class="arrow-up">&nearr;</span>
+              </a>
+            </div>
+
+            <div class="social-links-row animate-fade-up" style="animation-delay:0.68s">
+              <a href="https://github.com/paradkar267" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+                <span class="pill-arrow">&nearr;</span>
+              </a>
+              <a href="https://www.linkedin.com/in/yash-paradkar001" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <span>LinkedIn</span>
+                <span class="pill-arrow">&nearr;</span>
+              </a>
+              <a href="https://www.instagram.com/yash_paradkar68/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>Instagram</span>
+                <span class="pill-arrow">&nearr;</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Bottom Bar -->
+        <div class="view-footer-bar animate-fade-up" style="animation-delay:0.8s">
+          <a href="#about" class="scroll-explore-btn">
+            Scroll to explore <span class="down-arrow">&darr;</span>
+          </a>
+          <div class="footer-specialties">
+            DESIGN / DEVELOPMENT / AI
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: ABOUT (Behind the work)
+         ========================================================================= -->
+    <section id="about" class="portfolio-section about-section">
+      <div class="section-bg-graphic" style="background-image: url('portfolio-asset-pack/backgrounds/02-about-background.png');"></div>
+
+      <div class="section-content-container">
+
+        <!-- Eyebrow -->
+        <div class="view-eyebrow-row reveal">
+          <span class="eyebrow-text">BEHIND THE WORK</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <!-- Content Layout -->
+        <div class="about-magazine-layout">
+
+          <!-- Content -->
+          <div class="about-content-col reveal from-left" style="--delay:100ms">
+
+            <!-- Headline + intro -->
+            <div class="about-top-row">
+              <div class="about-text-side">
+                <h2 class="about-big-headline">
+                  A little<br>
+                  <span class="lime-text">about me.</span>
+                </h2>
+
+                <p class="about-lead-text">
+                  I'm Yash &mdash; a B.Tech Computer Science student at GH Raisoni University and a developer who cares deeply about <strong>what gets built and why.</strong>
+                </p>
+
+                <p class="about-body-text">
+                  During my internship at Bizleap, I shipped client-facing interfaces and integrated backend systems for real production use. Right now I'm diving deeper into Next.js, LangChain, and cloud deployment workflows. I believe good software is fast, honest, and never wastes the user's time.
+                </p>
+
+                <div class="about-expertise-row">
+                  <span class="expertise-chip">Frontend</span>
+                  <span class="expertise-chip">Backend</span>
+                  <span class="expertise-chip">Applied AI</span>
+                  <span class="expertise-chip">Next.js</span>
+                  <span class="expertise-chip">LangChain</span>
+                  <span class="expertise-chip">React</span>
+                  <span class="expertise-chip">Node.js</span>
+                </div>
+              </div>
+
+              <!-- Stats column on the right -->
+              <div class="about-stats-side">
+                <div class="about-stat-box">
+                  <span class="about-stat-num">8.66</span>
+                  <span class="about-stat-label">CGPA</span>
+                </div>
+                <div class="about-stat-box">
+                  <span class="about-stat-num">5+</span>
+                  <span class="about-stat-label">Projects Shipped</span>
+                </div>
+                <div class="about-stat-box">
+                  <span class="about-stat-num">1</span>
+                  <span class="about-stat-label">Internship</span>
+                </div>
+                <div class="about-stat-box accent-box">
+                  <span class="about-stat-num">∞</span>
+                  <span class="about-stat-label">Problems to Solve</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education + Experience credential cards -->
+            <div class="about-credential-stack">
+
+              <div class="credential-card reveal" style="--delay:180ms">
+                <div class="credential-accent"></div>
+                <div class="credential-body">
+                  <span class="credential-tag">Education</span>
+                  <h3 class="credential-title">B.Tech Computer Science &amp; Engineering</h3>
+                  <p class="credential-sub">GH Raisoni University, Nagpur &bull; 2022 – Present</p>
+                  <ul class="credential-list">
+                    <li>CGPA <strong>8.66</strong> &mdash; consistent academic performance</li>
+                    <li>Focus on DSA, Web Systems &amp; Machine Learning</li>
+                    <li>Active participant in hackathons and tech fests</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="credential-card reveal" style="--delay:260ms">
+                <div class="credential-accent"></div>
+                <div class="credential-body">
+                  <span class="credential-tag">Experience</span>
+                  <h3 class="credential-title">Web Development Intern</h3>
+                  <p class="credential-sub">Bizleap Technologies &bull; 2024</p>
+                  <ul class="credential-list">
+                    <li>Shipped client-facing sites with Next.js &amp; Tailwind CSS</li>
+                    <li>REST API integration &amp; production deployment</li>
+                    <li>Collaborated with cross-functional team on real client projects</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Currently learning + Values grid -->
+            <div class="about-info-grid">
+
+              <div class="about-info-card reveal" style="--delay:300ms">
+                <div class="info-card-icon">🎯</div>
+                <h4 class="info-card-title">Currently Learning</h4>
+                <ul class="info-card-list">
+                  <li>Next.js App Router &amp; Server Actions</li>
+                  <li>LangChain + RAG pipelines</li>
+                  <li>Cloud deployment on AWS &amp; Vercel</li>
+                  <li>TypeScript at scale</li>
+                </ul>
+              </div>
+
+              <div class="about-info-card reveal" style="--delay:360ms">
+                <div class="info-card-icon">⚡</div>
+                <h4 class="info-card-title">How I Build</h4>
+                <ul class="info-card-list">
+                  <li>Ship fast, iterate with feedback</li>
+                  <li>Performance-first, no bloat</li>
+                  <li>Accessible &amp; mobile-ready by default</li>
+                  <li>Clean code that future-me can read</li>
+                </ul>
+              </div>
+
+              <div class="about-info-card reveal" style="--delay:420ms">
+                <div class="info-card-icon">📍</div>
+                <h4 class="info-card-title">Quick Facts</h4>
+                <ul class="info-card-list">
+                  <li>📌 Based in Nagpur, India</li>
+                  <li>🎓 B.Tech Computer Science</li>
+                  <li>💼 Open to internships &amp; freelance</li>
+                  <li>🌐 English &amp; Hindi</li>
+                </ul>
+              </div>
+
+              <div class="about-info-card reveal" style="--delay:480ms">
+                <div class="info-card-icon">🔥</div>
+                <h4 class="info-card-title">Interests</h4>
+                <ul class="info-card-list">
+                  <li>AI / LLM product engineering</li>
+                  <li>Developer tooling &amp; DX</li>
+                  <li>Open source contributions</li>
+                  <li>Minimal &amp; editorial design</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="about-cta-row">
+              <a href="#work" class="btn-primary">
+                View my work <span class="arrow-up">&nearr;</span>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                Let's talk <span class="arrow-up">&nearr;</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Section Footer -->
+        <div class="page-footer-divider-row">
+          <span class="footer-author-text">Yash Paradkar</span>
+          <div class="footer-bottom-line"></div>
+          <div class="footer-social-anchors">
+            <a href="https://github.com/paradkar267" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+            <a href="https://www.linkedin.com/in/yash-paradkar001" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a>
+            <a href="https://www.instagram.com/yash_paradkar68/" target="_blank" rel="noopener noreferrer">Instagram &nearr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- =========================================================================
+         SECTION 3: SKILLS (My Toolkit & Technical Mastery)
+         ========================================================================= -->
+    <section id="skills" class="portfolio-section skills-section">
+      <div class="section-bg-graphic" style="background-image: url('portfolio-asset-pack/backgrounds/03-skills-background.png');"></div>
+
+      <div class="section-content-container">
+
+        <!-- Skills Header -->
+        <header class="section-header-compact reveal">
+          <div class="view-eyebrow-row">
+            <span class="eyebrow-text">MY TOOLKIT &amp; TECHNICAL MASTERY</span>
+            <span class="eyebrow-line"></span>
+          </div>
+
+          <h2 class="page-headline">
+            The technologies behind<br>
+            <span class="lime-text">modern digital systems.</span>
+          </h2>
+
+          <p class="section-description-text">
+            A curated breakdown of the technologies, frameworks, database architectures, and applied AI workflows I leverage to ship production-grade products.
+          </p>
+        </header>
+
+        <!-- Interactive Category Filter Tabs -->
+        <!-- Interactive Category Filter Tabs -->
+        <div class="skills-filter-row reveal" style="--delay: 40ms">
+          <button type="button" class="sk-filter-btn active" data-skfilter="all">All Disciplines <span class="sk-filter-count">16</span></button>
+          <button type="button" class="sk-filter-btn" data-skfilter="frontend">Frontend &amp; UI</button>
+          <button type="button" class="sk-filter-btn" data-skfilter="backend">Backend &amp; Database</button>
+          <button type="button" class="sk-filter-btn" data-skfilter="ai">AI &amp; Applied LLMs</button>
+          <button type="button" class="sk-filter-btn" data-skfilter="devops">DevOps &amp; Cloud</button>
+        </div>
+
+        <!-- 4 Compact Bento Cards Grid -->
+        <div class="skills-cards-grid">
+
+          <!-- Card 1: Frontend & UI Engineering -->
+          <div class="skill-category-card reveal" data-skcategory="frontend" style="--delay: 80ms">
+            <div class="sk-card-header">
+              <div class="sk-card-header-top">
+                <div class="sk-card-icon-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <span class="sk-card-num-badge">01 / UI</span>
+              </div>
+              <h3 class="sk-card-title">Frontend &amp; UI Engineering</h3>
+              <p class="sk-card-subtitle">High-performance, accessible, responsive client interfaces.</p>
+            </div>
+
+            <div class="sk-tools-list">
+              <!-- React -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D8FF" stroke-width="1.8"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="2" fill="#00D8FF"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">React.js</span>
+                    <span class="tool-sub">Component Architecture &amp; Hooks</span>
+                  </div>
+                </div>
+                <span class="sk-pill core">Core</span>
+              </div>
+
+              <!-- Next.js -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#111113" stroke="#e5e5e7" stroke-width="1.5"/><path d="M8 8V16M8 8L15 16M15 8V12" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Next.js 14</span>
+                    <span class="tool-sub">SSR, App Router &amp; Server Actions</span>
+                  </div>
+                </div>
+                <span class="sk-pill prod">Production</span>
+              </div>
+
+              <!-- TypeScript -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M5 8.5h7.5M8.75 8.5v9M13.5 14.5c.5.8 1.4 1.3 2.4 1.3 1.2 0 2-.6 2-1.5 0-2.3-4.5-1.4-4.5-4.2 0-1.4 1.2-2.6 3.1-2.6 1.3 0 2.2.4 2.8 1.2l-1.3 1.1c-.4-.5-1-.8-1.5-.8-.8 0-1.3.4-1.3.9 0 2.1 4.5 1.2 4.5 4.1 0 1.6-1.3 2.8-3.4 2.8-1.7 0-2.8-.7-3.6-1.8l1.3-1.1z" fill="#FFF"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">TypeScript</span>
+                    <span class="tool-sub">Type Safety &amp; Clean Contracts</span>
+                  </div>
+                </div>
+                <span class="sk-pill adv">Advanced</span>
+              </div>
+
+              <!-- Tailwind CSS -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#38BDF8"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.8-2.2 4.8-1.8 1.143.228 1.96 1.058 2.864 1.98C15.132 11.26 16.924 13.2 20.8 13.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.8 2.2-4.8 1.8-1.143-.228-1.96-1.058-2.864-1.98C17.668 6.74 15.876 4.8 12.001 4.8zM6.001 12c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.8-2.2 4.8-1.8 1.143.228 1.96 1.058 2.864 1.98C9.132 18.46 10.924 20.4 14.8 20.4c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.8 2.2-4.8 1.8-1.143-.228-1.96-1.058-2.864-1.98C11.668 13.94 9.876 12 6.001 12z" transform="scale(0.7) translate(3, 4)"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Tailwind CSS</span>
+                    <span class="tool-sub">Design Systems &amp; Fluid Layouts</span>
+                  </div>
+                </div>
+                <span class="sk-pill prod">Production</span>
+              </div>
+            </div>
+
+            <div class="sk-card-footer">
+              <span class="sk-footer-accent">Focus:</span> Sub-second load times &amp; accessible interfaces.
+            </div>
+          </div>
+
+          <!-- Card 2: Backend & Database Systems -->
+          <div class="skill-category-card reveal" data-skcategory="backend" style="--delay: 140ms">
+            <div class="sk-card-header">
+              <div class="sk-card-header-top">
+                <div class="sk-card-icon-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                </div>
+                <span class="sk-card-num-badge">02 / DATA</span>
+              </div>
+              <h3 class="sk-card-title">Backend &amp; Systems Architecture</h3>
+              <p class="sk-card-subtitle">Scalable APIs, authentication mechanisms, and persistent data layers.</p>
+            </div>
+
+            <div class="sk-tools-list">
+              <!-- Node.js -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#68A063" stroke-width="1.8"><polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"/><text x="12" y="15" text-anchor="middle" fill="#68A063" font-size="7" font-weight="bold" font-family="sans-serif">JS</text></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Node.js</span>
+                    <span class="tool-sub">Event-Driven Async Runtime</span>
+                  </div>
+                </div>
+                <span class="sk-pill core">Core</span>
+              </div>
+
+              <!-- Express.js -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="rgba(0,0,0,0.06)"/><text x="12" y="16" text-anchor="middle" fill="#111113" font-size="11" font-weight="700" font-family="var(--font-mono)">ex</text></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Express.js</span>
+                    <span class="tool-sub">REST Routing &amp; Middleware</span>
+                  </div>
+                </div>
+                <span class="sk-pill core">Core</span>
+              </div>
+
+              <!-- PostgreSQL -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(51,103,145,0.15)" stroke="#336791" stroke-width="1.5"/><path d="M12 6v12M8 10h8M8 14h6" stroke="#4185BA" stroke-width="1.6" stroke-linecap="round"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">PostgreSQL</span>
+                    <span class="tool-sub">Relational Schema &amp; Indexing</span>
+                  </div>
+                </div>
+                <span class="sk-pill adv">Advanced</span>
+              </div>
+
+              <!-- MongoDB -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#13AA52"><path d="M12 2c-.3 2.5-3 5.5-4 9-1.2 4.2.8 8.5 4 11 3.2-2.5 5.2-6.8 4-11-1-3.5-3.7-6.5-4-9zm0 18.5c-.2 0-.4-.1-.5-.2-.8-.8-1.5-2.2-1.5-4.3 0-3 1.2-5.4 2-7.2.8 1.8 2 4.2 2 7.2 0 2.1-.7 3.5-1.5 4.3-.1.1-.3.2-.5.2z"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">MongoDB</span>
+                    <span class="tool-sub">NoSQL, Mongoose &amp; Aggregations</span>
+                  </div>
+                </div>
+                <span class="sk-pill prod">Production</span>
+              </div>
+            </div>
+
+            <div class="sk-card-footer">
+              <span class="sk-footer-accent">Focus:</span> Structured endpoints &amp; safe database queries.
+            </div>
+          </div>
+
+          <!-- Card 3: Applied AI & Machine Learning -->
+          <div class="skill-category-card reveal" data-skcategory="ai" style="--delay: 200ms">
+            <div class="sk-card-header">
+              <div class="sk-card-header-top">
+                <div class="sk-card-icon-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3m-3.5-6.5l-2.1 2.1m-8.8 8.8l-2.1 2.1m0-13l2.1 2.1m8.8 8.8l2.1 2.1"/></svg>
+                </div>
+                <span class="sk-card-num-badge">03 / AI</span>
+              </div>
+              <h3 class="sk-card-title">Applied AI &amp; Machine Learning</h3>
+              <p class="sk-card-subtitle">Integrating LLMs, vector retrieval, and intelligent assistant workflows.</p>
+            </div>
+
+            <div class="sk-tools-list">
+              <!-- Python -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11.9 2c-3.1 0-4.9 1.4-4.9 3.5v2.6h5v.7H4.5C2.6 8.8 1 10.6 1 13.5c0 3 1.5 4.6 4.3 4.6h1.7v-2.3c0-2.4 2-4.4 4.4-4.4h4.3v-.8c0-2-1.7-3.4-3.8-3.4h-5V5.5c0-1.2 1-2.1 2.2-2.1h3.3c1.2 0 2.2 1 2.2 2.1v.7h1.4V5.5C20 3.3 18.2 2 15.1 2h-3.2zm-1.8 1.8c.5 0 .9.4.9.9 0 .5-.4.9-.9.9s-.9-.4-.9-.9c0-.5.4-.9.9-.9z" fill="#3776AB"/><path d="M12.1 22c3.1 0 4.9-1.4 4.9-3.5v-2.6h-5v-.7h7.5c1.9 0 3.5-1.8 3.5-4.7 0-3-1.5-4.6-4.3-4.6H17v2.3c0 2.4-2 4.4-4.4 4.4H8.3v.8c0 2 1.7 3.4 3.8 3.4h5v1.7c0 1.2-1 2.1-2.2 2.1h-3.3c-1.2 0-2.2-1-2.2-2.1v-.7H8v.7C8 20.7 9.8 22 12.9 22h-.8zm1.8-1.8c-.5 0-.9-.4-.9-.9 0-.5.4-.9.9-.9s.9.4.9.9c0 .5-.4.9-.9.9z" fill="#FFD43B"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Python</span>
+                    <span class="tool-sub">Data Pipelines &amp; AI Scripting</span>
+                  </div>
+                </div>
+                <span class="sk-pill adv">Advanced</span>
+              </div>
+
+              <!-- LangChain -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A67E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">LangChain</span>
+                    <span class="tool-sub">Chains, Agents &amp; Context Memory</span>
+                  </div>
+                </div>
+                <span class="sk-pill prod">Production</span>
+              </div>
+
+              <!-- RAG Pipelines -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C1502E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">RAG Pipelines</span>
+                    <span class="tool-sub">Contextual Chunking &amp; Retrieval</span>
+                  </div>
+                </div>
+                <span class="sk-pill prod">Production</span>
+              </div>
+
+              <!-- Vector DBs & LLMs -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Vector DBs &amp; LLMs</span>
+                    <span class="tool-sub">Pinecone, Chroma &amp; Claude/Gemini</span>
+                  </div>
+                </div>
+                <span class="sk-pill adv">Advanced</span>
+              </div>
+            </div>
+
+            <div class="sk-card-footer">
+              <span class="sk-footer-accent">Focus:</span> Production RAG systems &amp; low hallucination.
+            </div>
+          </div>
+
+          <!-- Card 4: DevOps, Cloud & Workflow -->
+          <div class="skill-category-card reveal" data-skcategory="devops" style="--delay: 260ms">
+            <div class="sk-card-header">
+              <div class="sk-card-header-top">
+                <div class="sk-card-icon-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                </div>
+                <span class="sk-card-num-badge">04 / DEVOPS</span>
+              </div>
+              <h3 class="sk-card-title">DevOps &amp; Cloud Workflows</h3>
+              <p class="sk-card-subtitle">Continuous deployment, version control, and API testing.</p>
+            </div>
+
+            <div class="sk-tools-list">
+              <!-- Git & GitHub -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#111113"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Git &amp; GitHub</span>
+                    <span class="tool-sub">Branching, PRs &amp; Versioning</span>
+                  </div>
+                </div>
+                <span class="sk-pill core">Core</span>
+              </div>
+
+              <!-- Vercel -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#111113"><path d="M12 1L24 22H0L12 1Z"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Vercel &amp; Edge</span>
+                    <span class="tool-sub">Serverless Deployment &amp; CI/CD</span>
+                  </div>
+                </div>
+                <span class="sk-pill prod">Production</span>
+              </div>
+
+              <!-- Postman -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF6C37"><path d="M13.5 4.5l-6 6 1.5 1.5 4.5-4.5V20h2V7.5l4.5 4.5 1.5-1.5-8-6z" transform="rotate(45 12 12)"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Postman</span>
+                    <span class="tool-sub">API Mocking, Testing &amp; Docs</span>
+                  </div>
+                </div>
+                <span class="sk-pill core">Core</span>
+              </div>
+
+              <!-- Linux / Bash -->
+              <div class="tool-item-row">
+                <div class="tool-left">
+                  <div class="tool-icon-box">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                  </div>
+                  <div class="tool-meta">
+                    <span class="tool-name">Linux / Bash</span>
+                    <span class="tool-sub">Shell Scripting &amp; Server CLI</span>
+                  </div>
+                </div>
+                <span class="sk-pill prof">Proficient</span>
+              </div>
+            </div>
+
+            <div class="sk-card-footer">
+              <span class="sk-footer-accent">Focus:</span> Rapid CI/CD cycles &amp; automated builds.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Technical Strengths Micro Strip -->
+        <div class="skills-strengths-matrix reveal" style="--delay: 280ms">
+          <div class="strength-card">
+            <div class="strength-header">
+              <span class="strength-icon">⚡</span>
+              <h4 class="strength-title">Full-Stack Execution</h4>
+            </div>
+            <p class="strength-desc">Database modeling &amp; API routing to responsive React/Next.js UI.</p>
+          </div>
+
+          <div class="strength-card">
+            <div class="strength-header">
+              <span class="strength-icon">🧠</span>
+              <h4 class="strength-title">Applied AI &amp; RAG</h4>
+            </div>
+            <p class="strength-desc">Conversational pipelines, embeddings &amp; reliable context retrieval.</p>
+          </div>
+
+          <div class="strength-card">
+            <div class="strength-header">
+              <span class="strength-icon">🔒</span>
+              <h4 class="strength-title">Security &amp; Auth</h4>
+            </div>
+            <p class="strength-desc">Hardened JWT auth, RBAC permissions &amp; defensive data safety.</p>
+          </div>
+
+          <div class="strength-card">
+            <div class="strength-header">
+              <span class="strength-icon">🎯</span>
+              <h4 class="strength-title">Performance &amp; DX</h4>
+            </div>
+            <p class="strength-desc">Sub-second load times, clean code &amp; automated Vercel CI/CD.</p>
+          </div>
+        </div>
+
+        <!-- Section Footer -->
+        <div class="page-footer-divider-row">
+          <span class="footer-author-text">Yash Paradkar</span>
+          <div class="footer-bottom-line"></div>
+          <div class="footer-social-anchors">
+            <a href="https://github.com/paradkar267" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+            <a href="https://www.linkedin.com/in/yash-paradkar001" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a>
+            <a href="https://www.instagram.com/yash_paradkar68/" target="_blank" rel="noopener noreferrer">Instagram &nearr;</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: WORK (Selected Projects)
+         ========================================================================= -->
+    <section id="work" class="portfolio-section work-section">
+      <div class="section-bg-graphic" style="background-image: url('portfolio-asset-pack/backgrounds/04-work-background.png');"></div>
+
+      <div class="section-content-container">
+        
+        <!-- Header with Filter Tabs -->
+        <div class="work-top-header reveal">
+          <div class="work-header-left">
+            <div class="view-eyebrow-row">
+              <span class="eyebrow-text">SELECTED WORK</span>
+              <span class="eyebrow-line"></span>
+            </div>
+
+            <h2 class="page-headline">
+              Ideas turned<br>
+              <span class="lime-text">into real projects.</span>
+            </h2>
+
+            <p class="page-subhead-lead">Web experiences, e-commerce, and AI-powered tools.</p>
+          </div>
+
+          <!-- Filter Pills -->
+          <div class="work-filter-pills">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="websites">Websites</button>
+            <button class="filter-btn" data-filter="ai-tools">AI tools</button>
+          </div>
+        </div>
+
+        <!-- Work Showcase Layout -->
+        <div class="work-main-showcase-grid">
+          
+          <!-- Left Large Card: Jewel Bot -->
+          <article class="work-large-card reveal" data-category="ai-tools" onclick="openProjectModal('jewel-bot')">
+            <div class="wlc-header-row">
+              <div class="wlc-title-col">
+                <h3 class="wlc-title">01 — Jewel Bot</h3>
+                <h4 class="wlc-subtitle">AI-powered jewellery assistant</h4>
+                <p class="wlc-desc">Jewellery discovery with a product catalogue and admin tools.</p>
+              </div>
+
+              <div class="wlc-tags-actions">
+                <div class="wlc-tag-pills">
+                  <span>AI</span>
+                  <span>Full-stack</span>
+                  <span class="wlc-vault-tag">🔑 Owner Vault Demo</span>
+                </div>
+                <span class="explore-project-link">Explore project ↗</span>
+              </div>
+            </div>
+
+            <!-- Sleek Owner Vault Demo Bar on Card -->
+            <div class="wlc-vault-card-bar">
+              <div class="vault-bar-left">
+                <span class="vault-bar-pulse"></span>
+                <span class="vault-bar-title">Owner's Vault Demo:</span>
+              </div>
+              <div class="vault-bar-creds">
+                <span class="vault-cred-item"><span class="vault-k">Email:</span> <code class="vault-code">yashparadkar4@gmail.com</code></span>
+                <span class="vault-bar-divider">•</span>
+                <span class="vault-cred-item"><span class="vault-k">Pass:</span> <code class="vault-code">1234567</code></span>
+              </div>
+              <span class="vault-bar-hint">Explore & Login ↗</span>
+            </div>
+
+            <div class="wlc-image-container">
+              <img src="portfolio-asset-pack/projects/jewel-bot-project-preview.png" alt="Jewel Bot UI Mockup" class="wlc-preview-image">
+            </div>
+          </article>
+
+          <!-- Right Column: 2 Stacked Cards -->
+          <div class="work-side-stack">
+            
+            <!-- BT Templates -->
+            <article class="work-medium-card reveal" style="--delay:100ms" data-category="websites" onclick="openProjectModal('bt-templates')">
+              <div class="wmc-header">
+                <div>
+                  <h3 class="wmc-title">02 &mdash; BT Templates</h3>
+                  <p class="wmc-subtitle">Modern website templates & design library</p>
+                </div>
+                <span class="explore-project-link">Explore project &nearr;</span>
+              </div>
+              <div class="wmc-image-box">
+                <img src="portfolio-asset-pack/projects/ChatGPT Image Sep 30, 2026, 03_05_17 PM-2.png" alt="BT Templates Marketplace">
+              </div>
+            </article>
+
+            <!-- Rajwadi -->
+            <article class="work-medium-card reveal" style="--delay:200ms" data-category="websites" onclick="openProjectModal('rajwadi')">
+              <div class="wmc-header">
+                <div>
+                  <h3 class="wmc-title">03 &mdash; Rajwadi</h3>
+                  <p class="wmc-subtitle">Luxury ethnic fashion e-commerce storefront</p>
+                </div>
+                <span class="explore-project-link">Explore project &nearr;</span>
+              </div>
+              <div class="wmc-image-box">
+                <img src="portfolio-asset-pack/projects/ChatGPT Image Sep 30, 2026, 03_05_18 PM-3.png" alt="Rajwadi Ethnic Wear">
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <!-- Section Footer -->
+        <div class="page-footer-divider-row">
+          <span class="footer-author-text">Yash Paradkar</span>
+          <div class="footer-bottom-line"></div>
+          <div class="footer-social-anchors">
+            <a href="https://github.com/paradkar267" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+            <a href="https://www.linkedin.com/in/yash-paradkar001" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a>
+            <a href="https://www.instagram.com/yash_paradkar68/" target="_blank" rel="noopener noreferrer">Instagram &nearr;</a>
+          </div>
+        </div>
+
+    <!-- =========================================================================
+         SECTION 5: CONTACT (Have an idea? Let's build it.)
+         ========================================================================= -->
+    <section id="contact" class="portfolio-section contact-section">
+      <div class="section-content-container">
+
+        <!-- Top Header Block -->
+        <div class="contact-top-header reveal">
+          <div class="contact-eyebrow-text">
+            GET IN TOUCH
+          </div>
+          <h2 class="contact-big-headline">
+            Have an idea?<br>
+            <span class="lime-text">Let's build it.</span>
+          </h2>
+          <p class="contact-subhead-lead">
+            Tell me what you have in mind.
+          </p>
+        </div>
+
+        <div class="contact-two-column-layout">
+
+          <!-- Left Column Content -->
+          <div class="contact-left-col reveal from-left">
+
+            <div class="contact-conversation-block">
+              <h3 class="conversation-title">Start a conversation.</h3>
+              <p class="conversation-sub">
+                For projects, collaborations or opportunities,<br class="hide-mobile"> send a message.
+              </p>
+            </div>
+
+            <!-- Social Links Rows -->
+            <div class="contact-links-table">
+              <div class="contact-link-row">
+                <span class="cl-label">GITHUB</span>
+                <a href="https://github.com/paradkar267" target="_blank" rel="noopener noreferrer" class="cl-anchor">github.com/paradkar267 &nearr;</a>
+              </div>
+              <div class="contact-link-row">
+                <span class="cl-label">LINKEDIN</span>
+                <a href="https://www.linkedin.com/in/yash-paradkar001" target="_blank" rel="noopener noreferrer" class="cl-anchor">Connect on LinkedIn &nearr;</a>
+              </div>
+            </div>
+
+            <!-- What I Can Help With -->
+            <div class="contact-help-block">
+              <h4 class="help-title">What I can help with</h4>
+              <ul class="help-list">
+                <li>Responsive websites</li>
+                <li>Backend systems</li>
+                <li>AI integrations</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Right Column (Form directly on background) -->
+          <div class="contact-right-col reveal from-right">
+            <form id="portfolioContactForm" class="contact-direct-form" onsubmit="event.preventDefault(); handleContactSubmit();">
+
+              <div class="form-field-group">
+                <label for="contact-name">Your name</label>
+                <input type="text" id="contact-name" required placeholder="Enter your name">
+              </div>
+
+              <div class="form-field-group">
+                <label for="contact-email">Email address</label>
+                <input type="email" id="contact-email" required placeholder="you@example.com">
+              </div>
+
+              <div class="form-field-group">
+                <label for="contact-project-type">What are you looking for?</label>
+                <select id="contact-project-type" required>
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="websites">Responsive websites</option>
+                  <option value="backend">Backend systems</option>
+                  <option value="ai">AI integrations</option>
+                  <option value="full-stack">Full-Stack Web App</option>
+                  <option value="other">Other / Collaboration</option>
+                </select>
+              </div>
+
+              <div class="form-field-group">
+                <label for="contact-msg">Your message</label>
+                <textarea id="contact-msg" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+              </div>
+
+              <button type="submit" class="contact-submit-btn">
+                Send message <span class="arrow-up">&nearr;</span>
+              </button>
+
+              <div id="contactFormSuccess" class="form-success-banner" style="display:none;">
+                &#10003; Thank you! Your message has been sent successfully.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Section Footer -->
+        <div class="contact-page-footer">
+          <div class="footer-left-info">
+            <span class="footer-name">Yash Paradkar</span>
+            <span class="footer-role">Full-stack developer</span>
+          </div>
+          <a href="#home" class="back-to-top-btn">
+            Back to top &uarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Detail Project Modal Popup -->
+  <div class="modal-overlay" id="projectDetailModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close-trigger" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
+      <div id="modalDynamicBody">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+  <script src="three-layer.js"></script>
+</body>
+</html>
