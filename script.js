@@ -95,7 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Work Section Filter Pills
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const filterCards = document.querySelectorAll('.work-large-card, .work-medium-card');
+  const filterCards = document.querySelectorAll('.work-large-card, .work-medium-card, .work-extra-card');
+  const extraWorkGrid = document.getElementById('workExtraGrid');
+  const toggleWorkBtn = document.getElementById('toggleAllWorkBtn');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -103,6 +105,18 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
+
+      // Auto-expand extra grid if filtering websites so user sees all items
+      if (filter === 'websites' && extraWorkGrid && !extraWorkGrid.classList.contains('open')) {
+        extraWorkGrid.classList.add('open');
+        if (toggleWorkBtn) {
+          toggleWorkBtn.classList.add('active');
+          toggleWorkBtn.setAttribute('aria-expanded', 'true');
+          const textSpan = toggleWorkBtn.querySelector('.btn-toggle-text');
+          if (textSpan) textSpan.innerText = 'Show Fewer Projects ↑';
+        }
+      }
+
       filterCards.forEach(card => {
         const cat = card.getAttribute('data-category');
         if (filter === 'all' || cat === filter) {
@@ -113,6 +127,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // 4a. View All Work Toggle
+  function toggleAllWork() {
+    if (!extraWorkGrid || !toggleWorkBtn) return;
+
+    const isOpen = extraWorkGrid.classList.contains('open');
+    if (isOpen) {
+      extraWorkGrid.classList.remove('open');
+      toggleWorkBtn.classList.remove('active');
+      toggleWorkBtn.setAttribute('aria-expanded', 'false');
+      const textSpan = toggleWorkBtn.querySelector('.btn-toggle-text');
+      if (textSpan) textSpan.innerText = 'View All Projects (6)';
+    } else {
+      extraWorkGrid.classList.add('open');
+      toggleWorkBtn.classList.add('active');
+      toggleWorkBtn.setAttribute('aria-expanded', 'true');
+      const textSpan = toggleWorkBtn.querySelector('.btn-toggle-text');
+      if (textSpan) textSpan.innerText = 'Show Fewer Projects ↑';
+    }
+  }
+  window.toggleAllWork = toggleAllWork;
 
   // 4b. Skills Section Filter Tabs
   const skFilterBtns = document.querySelectorAll('.sk-filter-btn');
@@ -181,6 +216,45 @@ document.addEventListener('DOMContentLoaded', () => {
         'Curated collection filtering for bridal, occasion & festive wear',
         'Seamless bag, wishlist, and bespoke size customizer workflows',
         'Mobile-first responsive storefront optimized for ultra-fast load times'
+      ]
+    },
+    'hey-investor': {
+      title: 'Hey Investor — Nagpur Property Discovery Platform',
+      tag: 'Web Platform / Real Estate / Discovery Engine',
+      image: 'portfolio-asset-pack/projects/Hey Investor_ Nagpur Property Discovery-2.png',
+      liveUrl: 'https://www.heyinvestor.in/',
+      description: 'A modern real estate discovery platform built to connect property buyers and investors with verified residential, commercial, and land investment opportunities across Nagpur.',
+      features: [
+        'Locality-based intelligent search with budget, layout & BHK filters',
+        'High-resolution visual property tours and verified project floor plans',
+        'Interactive investment return insights and neighborhood amenities breakdown',
+        'Direct WhatsApp broker connect and instant callback lead capture forms'
+      ]
+    },
+    'pankaj-overseas': {
+      title: 'Pankaj Overseas Exports — Global Import & Export Solutions',
+      tag: 'Global Trade / Import & Export / Multimodal Logistics',
+      image: 'portfolio-asset-pack/projects/Pankaj Overseas_ Connecting Continents-3.png',
+      liveUrl: 'https://www.pankajoverseasexports.com/',
+      description: 'Pankaj Overseas Exports is an international trade, import & export, and multimodal logistics portal facilitating seamless cross-border shipping, bulk commodity trade, and global logistics solutions.',
+      features: [
+        'Global trade portfolio and agricultural/industrial commodity directory',
+        'Multimodal air, sea & land cargo forwarding logistics capabilities',
+        'International trade compliance, customs advisory & export documentation',
+        'High-performance responsive corporate interface built for global clientele'
+      ]
+    },
+    'united-logistics': {
+      title: 'United Logistics — Every Journey Starts Here',
+      tag: 'Interactive Web / 3D Experience / Freight Logistics',
+      image: 'portfolio-asset-pack/projects/United Logistics_ Every Journey Starts Here-1.png',
+      liveUrl: 'https://newindia-3d.vercel.app/',
+      description: 'An interactive modern logistics platform (New India) featuring 3D visual experiences, multimodal freight transit coordination, and end-to-end supply chain transparency.',
+      features: [
+        'Interactive 3D container & cargo transit visualizer',
+        'Real-time shipment tracking query widget and transit status tools',
+        'Multimodal freight solutions across road, rail, air and marine corridors',
+        'Ultra-fast responsive web architecture built for modern logistics operations'
       ]
     }
   };
